@@ -25,7 +25,7 @@ body:has(.hl_login) {
 /* Kyntlo Split-Screen Background */
 .hl_login {
   background:
-    linear-gradient(90deg, var(--ky-primary) 0 50%, var(--ky-accent) 50% 100%) 0 0 / 100% 5px no-repeat,
+    linear-gradient(90deg, var(--ky-accent) 0 50%, var(--ky-primary) 50% 100%) 0 0 / 100% 5px no-repeat,
     radial-gradient(circle at 8% 82%, rgba(242, 0, 137, 0.12), transparent 22%),
     linear-gradient(108deg, var(--ky-primary) 0, rgba(109, 0, 193, 0.95) 44%, var(--ky-bg-light) 44%) !important;
   isolation: isolate;
@@ -83,7 +83,7 @@ body:has(.hl_login) {
 /* Kyntlo Brand Slogan - Left Side */
 .hl_login .hl_login--body::before {
   color: var(--ky-white);
-  content: "أتمتة الذكاء،\A لرفع كفاءة الأعمال.";
+  content: "KyntLo،\A Own Tomorrow.";
   font-size: clamp(42px, 4.25vw, 68px);
   font-weight: 800;
   left: 5.5vw;
