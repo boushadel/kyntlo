@@ -1,0 +1,256 @@
+/* ════════════════════════════════════════════════════════
+   Kyntlo White-Label Login Portal 
+════════════════════════════════════════════════════════ */
+
+:root {
+  --ky-primary: #6d00c1;
+  --ky-accent: #f20089;
+  --ky-bg-light: #f9fafb;
+  --ky-text-dark: #101828;
+  --ky-border: #eaecf0;
+  --ky-white: #ffffff;
+}
+
+html:has(.hl_login) {
+  background: var(--ky-bg-light) !important;
+}
+
+body:has(.hl_login) {
+  background: var(--ky-bg-light) !important;
+  color: var(--ky-text-dark) !important;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Kyntlo Split-Screen Background */
+.hl_login {
+  background:
+    linear-gradient(90deg, var(--ky-primary) 0 50%, var(--ky-accent) 50% 100%) 0 0 / 100% 5px no-repeat,
+    radial-gradient(circle at 8% 82%, rgba(242, 0, 137, 0.12), transparent 22%),
+    linear-gradient(108deg, var(--ky-primary) 0, rgba(109, 0, 193, 0.95) 44%, var(--ky-bg-light) 44%) !important;
+  isolation: isolate;
+  min-height: 100vh !important;
+  position: relative;
+}
+
+.hl_login .hl_login--header {
+  background: transparent !important;
+  height: auto !important;
+  inset: 0 0 auto;
+  margin: 0 !important;
+  padding: 28px 4.5vw !important;
+  position: absolute !important;
+  z-index: 5;
+}
+
+.hl_login .hl_login--header > .container-fluid {
+  align-items: center;
+  display: flex !important;
+  justify-content: space-between;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+/* Kyntlo Logo Container */
+.hl_login .hl_login--header a[href="./"] {
+  align-items: center;
+  background: var(--ky-white);
+  border: 1px solid var(--ky-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(109, 0, 193, 0.15);
+  display: inline-flex;
+  min-height: 70px;
+  padding: 11px 18px;
+}
+
+.hl_login .hl_login--header a[href="./"] img {
+  display: block;
+  height: auto !important;
+  max-height: 48px !important;
+  max-width: 190px !important;
+  object-fit: contain;
+  width: clamp(145px, 13vw, 190px) !important;
+}
+
+.hl_login .hl_login--body {
+  background: transparent !important;
+  margin: 0 !important;
+  min-height: 100vh !important;
+  padding: 0 !important;
+  position: relative;
+}
+
+/* Kyntlo Brand Slogan - Left Side */
+.hl_login .hl_login--body::before {
+  color: var(--ky-white);
+  content: "أتمتة الذكاء،\A لرفع كفاءة الأعمال.";
+  font-size: clamp(42px, 4.25vw, 68px);
+  font-weight: 800;
+  left: 5.5vw;
+  letter-spacing: -1.5px;
+  line-height: 1.02;
+  max-width: 34vw;
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  white-space: pre-line;
+  z-index: 1;
+}
+
+.hl_login .hl_login--body::after {
+  display: none;
+}
+
+.hl_login .hl_login--body > .container-fluid {
+  align-items: center;
+  display: flex !important;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 90px 5.5vw 10px calc(44% + 5.5vw) !important;
+}
+
+/* Kyntlo Login Card */
+.hl_login .card {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 2px solid var(--ky-border) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 24px 70px rgba(109, 0, 193, 0.12) !important;
+  color: var(--ky-text-dark) !important;
+  margin: 0 !important;
+  max-width: 540px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100% !important;
+}
+
+/* Top Accent Line */
+.hl_login .card::before {
+  background: linear-gradient(90deg, var(--ky-primary) 0 50%, var(--ky-accent) 50% 100%);
+  content: "";
+  height: 5px;
+  inset: 0 0 auto;
+  position: absolute;
+}
+
+.hl_login .card-body {
+  padding: 40px 48px 32px !important;
+}
+
+.hl_login .login-card-heading {
+  margin-bottom: 26px !important;
+}
+
+.hl_login :is(h1, h2, .heading2) {
+  color: var(--ky-text-dark) !important;
+  font-size: clamp(30px, 2.6vw, 38px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.75px;
+  line-height: 1.12 !important;
+  margin: 0 !important;
+}
+
+.hl_login :is(.form-group, .hl-text-input-container) {
+  color: var(--ky-text-dark) !important;
+  font-weight: 700;
+}
+
+.hl_login form .form-group {
+  margin-bottom: 14px !important;
+}
+
+.hl_login form .form-group.button-holder {
+  margin: 12px 0 0 !important;
+}
+
+/* Form Inputs */
+.hl_login :is(#email, #password, .hl-text-input) {
+  background: var(--ky-white) !important;
+  border: 2px solid var(--ky-border) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  color: var(--ky-text-dark) !important;
+  font-size: 15px !important;
+  height: 52px !important;
+  padding: 0 16px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100% !important;
+}
+
+.hl_login :is(#email, #password, .hl-text-input):focus {
+  border-color: var(--ky-primary) !important;
+  box-shadow: 0 0 0 4px rgba(109, 0, 193, 0.2) !important;
+  outline: 0 !important;
+}
+
+/* Primary Submit Button */
+.hl_login form button[type="submit"] {
+  background: var(--ky-primary) !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  color: var(--ky-white) !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  min-height: 52px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.hl_login form button[type="submit"]:hover {
+  filter: saturate(1.08) brightness(0.98);
+  transform: translateY(-2px);
+}
+
+/* Google Sign-In Button */
+.hl_login #wl_google_login_button {
+  background: var(--ky-white) !important;
+  border: 2px solid var(--ky-border) !important;
+  border-radius: 10px !important;
+  color: var(--ky-text-dark) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  margin-top: 12px !important;
+  min-height: 50px;
+}
+
+.hl_login #wl_google_login_button:hover {
+  background: #f9f0ff !important;
+  border-color: var(--ky-primary) !important;
+}
+
+/* Text Links */
+.hl_login :is(.forgot-password, #forgot_passowrd_btn, .foot-note a) {
+  color: var(--ky-accent) !important;
+  font-weight: 800 !important;
+}
+
+.hl_login :is(.forgot-password, #forgot_passowrd_btn, .foot-note a):hover {
+  color: var(--ky-primary) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hl_login {
+    background:
+      linear-gradient(90deg, var(--ky-primary) 0 50%, var(--ky-accent) 50% 100%) 0 0 / 100% 5px no-repeat,
+      linear-gradient(180deg, var(--ky-primary) 0 255px, var(--ky-bg-light) 255px) !important;
+  }
+  .hl_login .hl_login--body::before {
+    font-size: clamp(30px, 7.6vw, 42px);
+    left: 24px;
+    max-width: calc(100% - 48px);
+    top: 112px;
+    transform: none;
+  }
+  .hl_login .hl_login--body > .container-fluid {
+    align-items: flex-start;
+    padding: 270px 18px 30px !important;
+  }
+  .hl_login .card {
+    max-width: 560px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .hl_login .card-body {
+    padding: 38px 24px 30px !important;
+  }
+}
